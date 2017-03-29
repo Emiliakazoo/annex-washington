@@ -1,11 +1,80 @@
-.left {
-	background-color:pink;
+ul, li {
+	list-style-type: none;
+}
+
+/* for youtube videos */
+iframe[src*="youtube"]{
+	width:100%; 
+	height:61vw;
+}
+
+/* keep these for now.
+.left { 
 }
 
 .main {
-	background-color:aqua;
 }
 
 .right {
-	background-color:aquamarine; 
+}
+*/
+
+
+/* title bar styles */
+.title-bar.site {
+	display:-webkit-flex;
+	display:flex;
+	-webkit-align-items:center;
+	align-items:center;
+	background-color:red;
+
+	h1 {
+		margin-bottom:0;
+		margin-left:.5rem;
+	}
+}
+
+/* for the site text */
+
+.row.site-content {
+	section p {
+		margin-top:.1rem;
+		border-bottom:1px dashed red;
+		padding-bottom:.75rem;
+		padding-top:.75rem;
+		margin-bottom:.5rem;
+	}
+}
+
+/* for the results, to give them space */
+.results {
+
+	li {
+		margin-bottom:1rem;
+		padding-bottom:1rem;
+		border-bottom:1px dashed red;
+
+		p {
+			line-height:normal;
+		}
+	}
+}
+
+/* media query styles -- replace with eqcss someday so keep these to a minimum */
+.tablet-up {
+	display:none;
+}
+@media (min-width:768px){
+
+	iframe[src*="youtube"]{
+		height:42vw;
+	}
+
+
+	.mobile {
+		display:none;
+	}
+	.tablet-up {
+		display:block;
+	}
 }
